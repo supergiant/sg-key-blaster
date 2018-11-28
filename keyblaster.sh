@@ -24,6 +24,8 @@ echo ${member}
 echo "## ${member} Keys ##" >> $KEYS_FILE
 curl -s -H "Authorization: token ${TOKEN}" https://api.github.com/users/${member}/keys | grep key | awk '{$1=""; print $0}' | sed 's/"//g' | sed 's/,//' | sed 's/^[ \t]*//' >> $KEYS_FILE
 
+echo >> $KEYS_FILE
+
 done
 
 sleep 60m
