@@ -28,6 +28,6 @@ echo >> $KEYS_FILE
 
 done
 
-sleep 60m
+sleep 25m
 
 done
